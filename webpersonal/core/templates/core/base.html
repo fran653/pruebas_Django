@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}
-        | Web personal (con plantilla base) {% endblock %} </title>
+         {% endblock %} | Web personal (con plantilla base)</title>
 </head>
 <body>
-    <!-- cabezera y menú-->
+    <!-- cabezera y menú, ahora se usan los tags de las url-->
     <h1>Mi web personal (con plantilla base)</h1>
     <ul>
-    <li><a href="/">Portada</a></li>
-    <li><a href="/about/">Acerca de</a></li>
-    <li><a href="/portfolio/">Este soy yo</a></li>
-    <!-- <li><a href="/contact/">Quieres saber de mi?</a></li> -->
+    <li><a href="{% url 'home' %}">Portada</a></li>
+    <li><a href="{% url 'about' %}">Acerca de</a></li>
+    <li><a href="{% url 'portfolio' %}">Portfollo mucho</a></li>
+    <li><a href="{% url 'contact' %}">Quieres saber de mi?</a></li>
     </ul>
     <!--contenido-->
     {% block content %}
